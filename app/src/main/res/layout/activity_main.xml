@@ -27,5 +27,9 @@
         android:layout_height="wrap_content"
         android:text="전화 바로 걸기(Call)"/>
 
-
+    <Button
+        android:id="@+id/sendToBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문자 보내기 화면 연결(SendTo)"/>
 </LinearLayout>

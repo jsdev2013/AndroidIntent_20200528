@@ -25,6 +25,15 @@ class MainActivity : AppCompatActivity() {
 
             val myUri = Uri.parse("tel:${phoneNum}")
             val myIntent = Intent(Intent.ACTION_CALL, myUri)
+//            startActivity(myIntent)
+        }
+
+        sendToBtn.setOnClickListener {
+            val phoneNum = phoneNumEdt.text.toString()
+
+            val myUri = Uri.parse("smsto:${phoneNum}")
+            val myIntent = Intent(Intent.ACTION_SEND_MULTIPLE, myUri)
+            myIntent.putExtra("sms_body","미리 적어둘 내용")
             startActivity(myIntent)
         }
     }
